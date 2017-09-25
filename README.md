@@ -31,10 +31,10 @@ $ docker -it --name mongo -d mongo
 安装`easy-mock`
 
 ```
-$ docker pull blackcater/easy-mock:1.0.0
+$ docker pull blackcater/easy-mock:1.2.3
 $ docker run -it -p 7300:80 
              --link mongo --name easy-mock 
-             -d blackcater/easy-mock:1.0.0
+             -d blackcater/easy-mock:1.2.3
 ```
 
 之后，访问`localhost:7300`即可
