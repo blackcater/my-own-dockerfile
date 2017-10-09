@@ -12,10 +12,13 @@ ENV EASY_MOCK_VERSION 1.3.0
 WORKDIR /usr/app
 
 ARG registry=https://registry.npm.taobao.org
+ARG source=https://github.com/easy-mock/easy-mock/archive/v${EASY_MOCK_VERSION}.zip
 
-COPY easy-mock-${EASY_MOCK_VERSION}.tar .
-
-RUN tar -xvf easy-mock-${EASY_MOCK_VERSION}.tar && \
+RUN apt-get update && \
+	apt-get install unzip && \
+	wget -c ${source} -O easy-mock-${EASY_MOCK_VERSION}.zip && \
+	unzip easy-mock-${EASY_MOCK_VERSION}.zip && \
+	rm -rf easy-mock-${EASY_MOCK_VERSION}.zip && \
 	cd easy-mock-${EASY_MOCK_VERSION} && \
 	npm config set registry ${registry} && \
 	yarn config set registry ${registry} && \
