@@ -22,13 +22,21 @@
     "collection": "tokens",
     "secret": "shared-secret"
   },
+  "upload": {
+    "types": [".jpg", ".jpeg", ".png", ".gif", ".json", ".yml"],
+    "size": 5242880,
+    "dir": "../public/upload",
+    "expire": {
+      "types": [".json", ".yml"],
+      "day": -1
+    }
+  },
   "publicAPIs": [
     "/api/proxy",
     "/api/u/login",
     "/api/u/register",
     "/api/mock/by_projects",
     "/api/mock/export",
-    "/api/project/create/:groupId/by_swagger",
     "/api/wallpaper"
   ],
   "mockExample": {
@@ -63,7 +71,7 @@
     }
   },
   "fe": {
-    "uploadAPI": "",
+    "copyright": "",
     "storageNamespace": "easy_mock_",
     "timeout": 25000,
     "publicPath": "/dist/",
