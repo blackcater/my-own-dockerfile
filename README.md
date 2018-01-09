@@ -25,7 +25,7 @@ $ docker run -it --name node-sonar -d blackcater/node-sonar
 
 ```
 $ docker pull mongo
-$ docker -it --name mongo -d mongo
+$ docker run -it --name mongo -d mongo
 ```
 
 安装`easy-mock`
