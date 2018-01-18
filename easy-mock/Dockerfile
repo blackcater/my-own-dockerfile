@@ -3,10 +3,10 @@ FROM node:9.4.0
 
 
 # maintainers
-LABEL version="1.5.0"
+LABEL version="1.5.1"
 LABEL maintainers="blackcater<blackcater2015@gmail.com>"
 
-ENV EASY_MOCK_VERSION 1.5.0
+ENV EASY_MOCK_VERSION 1.5.1
 
 
 WORKDIR /
