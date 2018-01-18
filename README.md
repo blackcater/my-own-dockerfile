@@ -21,20 +21,36 @@ $ docker run -it --name node-sonar -d blackcater/node-sonar
 
 > 对`easy-mock`进行封装
 
-`easy-mock`依赖于`mongodb`，首先安装`mongodb`
+`easy-mock`依赖于`mongodb`和`redis`，首先安装`mongodb`和`redis`
 
 ```
 $ docker pull mongo
-$ docker run -it --name mongo -d mongo
+$ docker run -itd -p 27017:27017 --name mongo mongo
+$ docker pull redis
+$ docker run -itd -p 6379:6379 --name redis redis
 ```
 
 安装`easy-mock`
 
 ```
 $ docker pull blackcater/easy-mock
-$ docker run -it -p 7300:80 
-             --link mongo --name easy-mock 
+$ docker run -it -p 7300:7300 \
+             --link mongo:mongo \
+             --link redis:redis \
+             --name easy-mock \
              -d blackcater/easy-mock
 ```
 
 之后，访问`localhost:7300`即可
+
+如果你想要覆盖 `config/local.json` 文件，请按下面命令安装`easy-mock`
+
+```
+$ docker pull blackcater/easy-mock
+$ docker run -it -p 7300:7300 \
+             --link mongo:mongo \
+             --link redis:redis \
+             -v /easy-mock/conf:/easy-mock/conf \
+             --name easy-mock \
+             -d blackcater/easy-mock
+```
