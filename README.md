@@ -1,5 +1,6 @@
-
 # 自己用的一些`Dockerfile`
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fblackcater%2Fdocker.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fblackcater%2Fdocker?ref=badge_shield)
+
 
 ## 目录
 
@@ -54,3 +55,7 @@ $ docker run -it -p 7300:7300 \
              --name easy-mock \
              -d blackcater/easy-mock
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fblackcater%2Fdocker.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fblackcater%2Fdocker?ref=badge_large)
