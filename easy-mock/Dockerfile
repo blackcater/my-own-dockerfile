@@ -1,5 +1,5 @@
 # from node 9.4.0
-FROM node:9.4.0
+FROM node:9.6.0
 
 
 # maintainers
