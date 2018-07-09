@@ -1,12 +1,12 @@
-# from node 9.4.0
-FROM node:9.6.0
+# from node 9.11.1
+FROM node:9.11.1
 
 
 # maintainers
-LABEL version="1.5.1"
+LABEL version="1.6.0"
 LABEL maintainers="blackcater<blackcater2015@gmail.com>"
 
-ENV EASY_MOCK_VERSION 1.5.1
+ENV EASY_MOCK_VERSION 1.6.0
 
 
 WORKDIR /
